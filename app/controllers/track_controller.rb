@@ -7,7 +7,7 @@ class TrackController < ActionController::Base
 
     # mixpanel sends withCrednetials so mp_optout is respected but that's not allowed with a *
     headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || '*'
-    headers['Access-Control-Allow-Credentials'] = true
+    headers['Access-Control-Allow-Credentials'] = 'true'
 
     headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, PUT, DELETE'
     headers['Access-Control-Allow-Headers'] = 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With'
